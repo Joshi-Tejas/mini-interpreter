@@ -8,6 +8,7 @@
 #include<ctype.h>
 #include<string.h>
 #include<stdlib.h>
+#include<math.h>
 
 #define NONE_OF_THESE 0
 #define DIGIT 1
@@ -317,6 +318,15 @@ struct info_about_tokens* postfix(struct info_about_tokens *postfix_ptr,int toke
 	}	
 
 	return temp_ptr;
+}
+
+bool
+foo (float x)
+{
+	float y;
+	y = floor(x);
+	printf ("The number is : %f", y);
+	return true;
 }
 
 struct node* AST(struct info_about_tokens *ptr_struct,int token_cnt,int cnt_except_paren){
